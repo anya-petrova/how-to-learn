@@ -1,11 +1,7 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -18,6 +14,7 @@
   position: relative;
   align-items: center;
   padding-left: 64px;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 
@@ -41,8 +38,8 @@
 
 .header__subtitle {
   width: 388px;
-  bottom: 30px;
   position: absolute;
+  bottom: 30px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -70,17 +67,17 @@
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
+  right: 0;
+  top: 64px;
   height: 568px;
   width: 568px;
   background-color: #2f80ed;
-  right: 0;
-  top: 64px;
   z-index: 1;
 }
 
 .description {
   position: relative;
-  padding-top: 100px;
+  padding: 100px 0 0;
 }
 
 .two-columns {
@@ -93,23 +90,28 @@
 .two-columns__brief {
   width: 175px;
   color: #2f80ed;
-  line-height: 1,2;
+  line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin: 0;
 }
 
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
   flex-direction: column;
-  align-content: space-between;
 }
 
 .two-columns__paragraph {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin: 0;
   padding-bottom: 30px;
+}
+
+.two-columns__paragraph:nth-last-child(1) {
+  padding: 0;
 }
 
 .two-columns__span-accent {
@@ -119,7 +121,7 @@
 }
 
 .digits {
-  padding-top: 100px;
+  padding: 100px 0 0;
 }
 
 .section-title {
@@ -128,7 +130,7 @@
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding: 0 0 20px;
   text-align: center;
 }
 
@@ -143,13 +145,12 @@
 
 .table {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-self: center;
   flex-wrap: wrap;
   width: 1100px;
-  padding-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .table__cell {
@@ -157,22 +158,30 @@
   list-style-type: none;
 }
 
-.table__headings {
+.table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
+  padding: 60px 0 20px;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.table__text:last-child {
+  padding: 0;
 }
 
 .feinman {
   height: 790px;
   position: relative;
-  padding-top: 100px;
+  padding: 100px 0 0;
 }
 
 .feinman__title {
@@ -183,7 +192,7 @@
   font-weight: bold;
   z-index: 100;
   text-align: center;
-  padding-bottom: 70px;
+  padding: 0 0 70px;
 }
 
 .feinman__subtitle {
@@ -203,6 +212,7 @@
   top: 50%;
   right: 48px;
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .feinman__image {
@@ -218,23 +228,32 @@
   background-color: #1f1f1f;
   position: relative;
   z-index: 1;
-  padding-bottom: 90px;
-  padding-top: 90px;
+  padding: 90px 0;
+  overflow: hidden;
+  min-height: 540px;
 }
 
-.section-title__theme_dark {
+.section-title_theme_dark {
   color: white;
 }
 
-.section-subtitle__theme_dark {
+.section-subtitle_theme_dark {
   color: white;
 }
 
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.table__heading_theme_dark {
+  padding: 80px 0 20px;
+}
+
+.table__text_theme_dark {
+  padding: 0;
 }
 
 .kaufman__triangle {
@@ -242,8 +261,8 @@
   width: 877px;
   height: 877px;
   position: absolute;
-  right: -210px;
   top: 0;
+  right: -210px;
   z-index: -1;
 }
 
@@ -255,12 +274,12 @@
 
 .footer__columns {
   display: flex;
-  margin: auto;
+  margin: 0 auto;
   width: 90%;
-  min-height: 100%;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  height: 100%;
+  min-height: 250px;
   justify-content: space-between;
+  padding: 60px 0 40px;
 }
 
 .footer__column {
@@ -276,8 +295,7 @@
 .logo_place_footer {
   width: 183px;
   height: 35px;
-  padding-top: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 .footer__author {
@@ -318,5 +336,5 @@
 .footer__social-icons {
   width: 16px;
   height: 16px;
-  padding-right: 10px;
+  padding: 0 10px 0 0;
 }

@@ -1,0 +1,9 @@
+.cards__item {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 240px;
+}
+
+.cards__item:nth-last-child(1) {
+    visibility: hidden;
+}

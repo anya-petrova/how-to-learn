@@ -1,9 +1,14 @@
 .cards__item {
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0;
     width: 240px;
+    padding: 0 100px 0 0;
 }
 
 .cards__item:nth-last-child(1) {
     visibility: hidden;
+}
+
+.cards__item:nth-child(3n) {
+    padding: 0;
 }

@@ -8,6 +8,5 @@
 
   .header__link:hover {
     opacity: 0.8;
-    font-weight: bold;
-    transition: font-weight;
+    transition: opacity 1s ease;
   }
